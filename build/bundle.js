@@ -46,9 +46,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("var express = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar renderToString = (__webpack_require__(/*! react-dom/server */ \"./node_modules/react-dom/server.js\").renderToString);\n\nvar Home = (__webpack_require__(/*! ./client/pages/Home */ \"./src/client/pages/Home.js\")[\"default\"]);\n\nvar app = express();\napp.get(\"/\", function (req, res) {\n  var content = renderToString( /*#__PURE__*/React.createElement(Home, null));\n  res.send(content);\n});\napp.listen(8888, function () {\n  return console.log(\"Server up running on port 8888\");\n});\n\n//# sourceURL=webpack://react-ssr/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"./node_modules/express/index.js\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _client_pages_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./client/pages/Home */ \"./src/client/pages/Home.js\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom/server */ \"./node_modules/react-dom/server.js\");\n\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.get(\"/\", function (req, res) {\n  var content = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_3__.renderToString)( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_client_pages_Home__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n  res.send(content);\n});\napp.listen(8888, function () {\n  return console.log(\"Server up running on port 8888\");\n});\n\n//# sourceURL=webpack://react-ssr/./src/index.js?");
 
 /***/ }),
 
@@ -1588,6 +1589,18 @@ eval("module.exports = JSON.parse('{\"100\":\"Continue\",\"101\":\"Switching Pro
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
