@@ -1,7 +1,7 @@
 const express =require('express')
 const React =require('react')
 const renderToString=require("react-dom/server").renderToString
-const Home = require("../client/src/pages/Home.tsx").default
+const Home = require("./client/pages/Home").default
 
 
 
