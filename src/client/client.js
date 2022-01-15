@@ -1,1 +1,5 @@
-console.log("Hello world form Client")
+import React from "react";
+import ReactDOM from "react-dom";
+import Home from "./pages/Home";
+
+ReactDOM.hydrate(<Home />, document.querySelector("#root"));
